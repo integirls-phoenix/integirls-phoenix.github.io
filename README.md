@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # INTEGIRLS Chapter Website Template
 website template for chapters of [INTEGIRLS](https://www.integirls.org/)
 to view what the template looks like, visit [https://integirls.github.io/index.html](https://integirls.github.io/index.html)
@@ -9,3 +10,7 @@ to use this template:
 4. send your website to the tech director who will connect it to the custom domain
 
 contact us if you have questions!
+=======
+# integirls-phoenix.github.io
+INTEGIRLS Phoenix Chapter
+>>>>>>> 459064d5003e00fc4a3fd8d0e1259464e63edbda
