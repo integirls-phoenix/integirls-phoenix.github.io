@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Team – INTEGIRLS Phoenix</title>
+
+  <link rel="icon" type="image/png" href="header-footer/favicon.ico">
+
+  <!-- Shared site styles -->
+  <link rel="stylesheet" href="index-style.css">
+
+  <!-- Team-specific styles -->
+  <link rel="stylesheet" href="team.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap">
+</head>
+
+<body>
+  <div class="main-body">
+
+    <!-- Header -->
+    <div class="top-bar">
+      <table style="width:100%">
+        <tr>
+          <td style="text-align:left;">
+            <img src="logoimage.jpg" alt="INTEGIRLS Phoenix Logo" class="header-logo">
+            <span style="line-height:1"><b>INTEGIRLS Phoenix</b></span>
+          </td>
+          <td style="text-align:right;">
+            <a href="index.html">Home</a> |
+            <a href="compete/compete.html">Compete</a> |
+            <a href="pastcontents/pastcontents.html">Past Contests</a> |
+            <a href="sponsors/sponsors.html">Sponsors</a> |
+            <a href="donate.html">Donate</a> |
+            <a class="active" href="team.html">Our Team</a> |
+            <a href="https://www.integirls.org/" target="_blank">INTEGIRLS</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="fade-in">Our Team</h1>
+    </section>
+
+    <main>
+
+      <!-- Founder Section -->
+      <section class="founder-section">
+        <h2>Founder & President : Sabrina Singh</h2>
+
+        <div class="founder-container">
+          <img src="sabrina.jpg" alt="Sabrina Singh" class="founder-img" onclick="openModal('sabrina')">
+
+          <div class="founder-box">
+            <p>
+              Hi! I’m Sabrina, a senior at ACP High School with a lifelong love for mathematics and problem-solving. I’ve competed in contests such as the AMCs and AIME and earned multiple recognitions, including being a 10-time recipient of the MAA Young Women in Mathematics Certificates of Excellence.
+              Math has been my passion since I was five, but being one of the few girls in competitive math often made me feel like every mistake defined me—not just as a student, but as a girl. Over time, I realized that my worth is not determined by stereotypes, but by my curiosity and persistence. That realization helped me grow into both a stronger problem-solver and a more confident person.
+              My background is what makes this mission so important to me. I started this chapter to create the kind of community I once wished for: a space where girls can take risks, make mistakes, learn, and celebrate their love for STEM together.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chapter Leaders -->
+      <section class="leaders-section">
+        <h2>Chapter Leaders</h2>
+
+        <div class="leaders-grid">
+
+          <div class="leader-card">
+            <img src="Mirandu.jpg" alt="Miranda Gu" class="leader-img" onclick="openModal('miranda')" role="button" tabindex="0">
+            <div class="leader-name">Miranda Gu</div>
+          </div>
+
+          <div class="leader-card">
+            <img src="Riya.jpg" alt="Riya Patel" class="leader-img" onclick="openModal('riya')" role="button" tabindex="0">
+            <div class="leader-name">Riya Patel</div>
+          </div>
+
+          <div class="leader-card">
+            <img src="subham.jpg" alt="Shubham Gupta" class="leader-img" onclick="openModal('shubham')" role="button" tabindex="0">
+            <div class="leader-name">Shubham Gupta</div>
+          </div>
+
+          <div class="leader-card">
+            <img src="cathy.jpg" alt="Cathy Jiang" class="leader-img" onclick="openModal('cathy')" role="button" tabindex="0">
+            <div class="leader-name">Cathy Jiang</div>
+          </div>
+
+          <div class="leader-card">
+            <img src="Nia.jpg" alt="Nia Zhu" class="leader-img" onclick="openModal('nia')" role="button" tabindex="0">
+            <div class="leader-name">Nia Zhu</div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <div class="footer">
+  <div>© 2025 INTEGIRLS Phoenix</div>
+  <div>
+    Instagram : <a href="https://www.instagram.com/integirls.phoenix" target="_blank">@integirls.phoenix</a> |
+    Email : <a href="mailto:phoenix@integirls.org">phoenix@integirls.org</a>
+  </div>
+</div>
+  </div>
+
+  <!-- Modal -->
+  <div id="memberModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Close" onclick="closeModal()">×</button>
+      <div id="modalInner"></div>
+    </div>
+  </div>
+
+  <!-- FULL MODAL SCRIPT (WORKING) -->
+  <script>
+    // Full bios for modal
+    const bios = {
+      miranda: {
+        name: "Miranda Gu",
+        text: `Hi everyone! My name is Miranda Gu and I am one of the Chapter Leaders for INTEGIRLS Phoenix. I’m passionate about making math fun, supportive, and empowering for girls in our community. Outside of math, I enjoy crocheting, coding, and making jewelry. I’m so excited to help lead events and support this global mission!`
+      },
+      riya: {
+        name: "Riya Patel",
+        text: `I’m excited to serve as a chapter leader this year and help INTEGIRLS Phoenix grow. I hope to instill a passion for STEM and work with leaders to expand opportunities. I’m involved in FBLA-IT, Speech and Debate, and Mock Trial. I deeply believe in equity in STEM education and am proud to support our chapter.`
+      },
+      shubham: {
+        name: "Shubham Gupta",
+        text: `Hello! My name is Shubham Gupta, and I’m a rising senior at Arizona College Prep High School. I’m part of Mu Alpha Theta, DECA, Investment Club, and more. I love debate, volunteering, and calligraphy. I’m excited to be a chapter leader and help create an inclusive space for girls in STEM.`
+      },
+      cathy: {
+        name: "Cathy Jiang",
+        text: `Hi everyone! I’m Yuxuan (Cathy) Jiang, and I’m excited to serve as a chapter leader! I’ve participated in various STEM initiatives such as robotics and Mu Alpha Theta. I care deeply about making STEM accessible and inclusive, and I can’t wait to help build a supportive, encouraging community.`
+      },
+      nia: {
+        name: "Nia Zhu",
+        text: `Hi! I'm Nia Zhu. I’ve competed in math contests since elementary school including Mathleague, MATHCOUNTS, and AMC 8/10. I'm the secretary of my school's Mu Alpha Theta and I coach younger students in competitive math. Through INTEGIRLS, I hope to help girls feel confident pursuing math.`
+      },
+      sabrina: {
+        name: "Sabrina Singh",
+        text: `Hi! I’m Sabrina, a senior at ACP High School and the Founder of INTEGIRLS Phoenix. I’ve competed in AMC/AIME and received multiple recognitions including 10 MAA Young Women in Mathematics Excellence awards. My goal is to build a supportive community where girls can grow, take risks, and enjoy STEM together.`
+      }
+    };
+
+    function openModal(key) {
+      const bio = bios[key];
+      if (!bio) return;
+
+      const inner = document.getElementById('modalInner');
+      inner.innerHTML = `
+        <h2 style="margin-top:0">${bio.name}</h2>
+        <p>${bio.text}</p>
+      `;
+
+      const modal = document.getElementById('memberModal');
+      modal.style.display = "flex";
+      modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('memberModal');
+      modal.style.display = "none";
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    // Close when clicking outside
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('memberModal');
+      if (e.target === modal) closeModal();
+    });
+
+    // Close on ESC
+    window.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    // Keyboard accessibility
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Enter" && document.activeElement.classList.contains('leader-img')) {
+        const alt = document.activeElement.getAttribute('alt') || "";
+        const map = {
+          "Miranda Gu": "miranda",
+          "Riya Patel": "riya",
+          "Shubham Gupta": "shubham",
+          "Cathy Jiang": "cathy",
+          "Nia Zhu": "nia",
+          "Sabrina Singh": "sabrina"
+        };
+        if (map[alt]) openModal(map[alt]);
+      }
+    });
+  </script>
+
+</body>
+</html>

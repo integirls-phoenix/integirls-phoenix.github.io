@@ -1,0 +1,212 @@
+:root {
+    --primary-color: hsl(253, 34%, 46%);
+    --dark-color: #000000;
+    --light-pink: #ffd6e7;
+    --pink: #ffb6c1;
+    --white-color: #ffffff;
+    --header-font: 'Montserrat', sans-serif;
+    --body-font: 'Lato', sans-serif;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+
+/* body styles */
+body {
+    font-family: var(--body-font);
+    background-color: var(--white-color);
+    margin: 0;
+    color: var(--dark-color);
+    line-height: 1.6;
+    overscroll-behavior: none;
+}
+
+.main-body {
+    padding-top: 9vh;
+}
+
+/* heading styles */
+h1, h2, h3, h4 {
+    font-family: var(--header-font);
+    font-weight: 700;
+    margin: 10px 0 0 0;
+    color: var(--dark-color);
+}
+
+h1 {
+    font-size: 6rem; /* base size */
+}
+
+h2, h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--dark-color);
+}
+
+/* homepage hero section */
+.hero {
+    position: relative;
+    background-image: url('homepage-image.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+}
+
+/* dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 2;
+}
+
+/* section colors */
+.mission {
+    background-color: var(--light-pink);
+    text-align: center;
+    padding: 10px 80px;
+    color: var(--dark-color);
+}
+
+.upcoming-events {
+    background-color: var(--white-color);
+    text-align: center;
+    padding: 10px 80px;
+    color: var(--dark-color);
+}
+
+.faq {
+    background-color: var(--pink);
+    text-align: center;
+    padding: 10px 80px;
+    color: var(--dark-color);
+}
+
+.long-announcement {
+    background-color: var(--white-color);
+    text-align: center;
+    padding: 10px 80px;
+    color: var(--dark-color);
+}
+
+/* animating fade-in title */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header styles */
+.top-bar {
+    position: fixed;
+    width: 96%;
+    z-index: 9999;
+    height: 80px;
+    background-color: var(--light-pink) !important; /* UPDATED */
+    font-size: 23px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* Logo styling */
+.header-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url("logoimage.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation links */
+.top-bar a {
+    color: black;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background: var(--white-color);
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--dark-color);
+    line-height: 1.5;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.footer a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    color: #555555;
+}
+
+/* Chrome Fix */
+@media (max-width: 2000px) {
+  .hero {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+
+/* =========================================
+   GLOBAL TITLE OVERRIDES FOR ALL PAGES
+   ========================================= */
+
+/* Ensures all hero page titles are white */
+.hero h1 {
+    color: #ffffff !important;   /* UPDATED */
+    font-size: 4rem !important;  /* SAME SIZE FOR ALL PAGES */
+}
