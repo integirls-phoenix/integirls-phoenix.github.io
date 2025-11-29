@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap">
+
+    <link rel="stylesheet" href="responsive-fix.css">
 </head>
 
 <body>
@@ -103,5 +105,39 @@
 </div>
 
 </div>
+
+
+<script>
+(function(){
+  function applyScale() {
+    try {
+      var vw = document.documentElement.clientWidth || window.innerWidth;
+      // measure the document width that would be used by the desktop layout
+      var dw = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth);
+      if (!dw || dw <= vw) {
+        document.body.style.transform = '';
+        document.body.style.width = '';
+        return;
+      }
+      var scale = vw / dw;
+      document.body.style.transformOrigin = 'top left';
+      document.body.style.transform = 'scale(' + scale + ')';
+      // keep the body's layout width so scaling appears correctly
+      document.body.style.width = dw + 'px';
+      // adjust height to account for scaling (so page isn't cut off)
+      var newHeight = Math.ceil((document.documentElement.clientHeight || window.innerHeight) / scale);
+      document.body.style.minHeight = newHeight + 'px';
+      document.documentElement.style.height = '100%';
+    } catch (e) {
+      console.error('scaling error', e);
+    }
+  }
+  // Run on load and on resize/orientation change
+  window.addEventListener('load', applyScale);
+  window.addEventListener('resize', applyScale);
+  window.addEventListener('orientationchange', function(){ setTimeout(applyScale, 200); });
+})();
+</script>
+
 </body>
 </html>
