@@ -66,3 +66,33 @@ header td, .header-container td, .site-header td {
   .header-logo + strong,
   .header-logo + b { white-space: normal; max-width: none; }
 }
+
+/* ====== FIX HEADER LOGO + TEXT SHIFTING ====== */
+.top-bar table td:first-child {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.header-logo {
+    height: 55px;
+    width: auto;
+}
+
+.top-bar table td:first-child span {
+    font-size: 22px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Mobile Fix */
+@media (max-width: 600px) {
+    .header-logo {
+        height: 45px;
+    }
+
+    .top-bar table td:first-child span {
+        font-size: 18px;
+    }
+}
