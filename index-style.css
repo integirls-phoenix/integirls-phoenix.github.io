@@ -211,46 +211,30 @@ p {
     font-size: 4rem !important;  /* SAME SIZE FOR ALL PAGES */
 }
 
-/* ====== GLOBAL HEADER FIX (Copied from Sponsors page) ====== */
-
+/* GLOBAL HEADER FIX */
 .top-bar {
     background-color: var(--light-pink);
     padding: 10px 20px;
     width: 100%;
     box-sizing: border-box;
 }
-
-.top-bar table {
-    width: 100%;
-}
-
+.top-bar table { width:100%; }
 .header-logo {
-    height: 55px;
-    width: auto;
-    vertical-align: middle;
-    margin-right: 10px;
+    height:55px; width:auto; margin-right:10px; vertical-align:middle;
 }
-
 .top-bar td:first-child {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap;
+    display:flex !important;
+    align-items:center;
+    gap:10px;
+    white-space:nowrap;
 }
-
 .top-bar td:last-child a {
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    margin-left: 5px;
+    font-size:16px;
+    font-weight:600;
+    text-decoration:none;
+    margin-left:5px;
 }
-
-@media (max-width: 600px) {
-    .header-logo {
-        height: 45px;
-    }
-
-    .top-bar td:last-child a {
-        font-size: 14px;
-    }
+@media(max-width:600px){
+    .header-logo{height:45px;}
+    .top-bar td:last-child a{font-size:14px;}
 }
