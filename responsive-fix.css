@@ -32,3 +32,37 @@ nav ul li a{font-size:1.1rem;padding:8px 12px;}
 .main-body{padding:0 15px;}
 h1,h2,h3,h4{text-align:center;}}
 @media (max-width:480px){.header-logo{width:90px;}nav ul li a{font-size:1rem;}}
+
+/* Header brand alignment fix: keep "INTEGIRLS Phoenix" inside the header box */
+.header-logo {
+  height: 55px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.header-logo + span,
+.header-logo + strong,
+.header-logo + b,
+img.header-logo + span {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  max-width: calc(100% - 140px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Ensure table cell or header cell aligns items vertically */
+header td, .header-container td, .site-header td {
+  vertical-align: middle;
+}
+
+/* For small screens allow wrapping gracefully */
+@media (max-width: 480px) {
+  .header-logo { height: 48px; margin-right:8px; }
+  .header-logo + span,
+  .header-logo + strong,
+  .header-logo + b { white-space: normal; max-width: none; }
+}
