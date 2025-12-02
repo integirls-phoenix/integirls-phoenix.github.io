@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Past Contests | INTEGIRLS Phoenix</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../header-footer/favicon.ico">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../index-style.css">
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="pastcontents.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap">
+</head>
+
+<body>
+  <div class="main-body">
+
+    <!-- Header -->
+    <div class="top-bar">
+      <table style="width: 100%;">
+        <tr>
+          <td style="text-align: left;">
+            <img src="../logoimage.jpg" alt="INTEGIRLS Phoenix Logo" class="header-logo">
+            <span><b>INTEGIRLS Phoenix</b></span>
+          </td>
+          <td style="text-align: right;">
+            <a href="../index.html">Home</a> |
+            <a href="../compete/compete.html">Compete</a> |
+            <a href="pastcontents.html" class="active">Past Contents</a> |
+            <a href="../sponsors/sponsors.html">Sponsors</a> |
+            <a href="../donate.html">Donate</a> |
+            <a href="../team.html">Our Team</a> |
+            <a href="https://www.integirls.org/" target="_blank">INTEGIRLS</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <main>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1 class="fade-in">Past Contests</h1>
+      </section>
+
+      <!-- Content Layout -->
+      <div class="contest-container">
+
+        <!-- Sidebar -->
+        <nav class="year-subnav" aria-label="Past contest years">
+          <h3>Past Contest Archive</h3>
+          <ul class="year-list">
+            <li><a href="#Fall2025" class="year-link" data-year="Fall2025">Fall 2025</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contest Content -->
+        <div class="contest-content">
+
+          <div id="Fall2025" class="year-content">
+            <h2>Fall 2025 Contest</h2>
+            <p>Thank you to all our amazing participants for making this contest a success!</p>
+
+            <h3>Middle School Division</h3>
+            <ul>
+              <li><a href="https://drive.google.com/file/d/1ZEbKX8hvs5uZSxgob2OaBfSjFmVYs-50/view?usp=sharing" target="_blank">Individual Round Problems</a></li>
+              <li><a href="https://drive.google.com/file/d/1RUV-AN71a5RpFuv83KqhNO4-7_jJYNae/view?usp=sharing" target="_blank">Team Round Problems</a></li>
+              <li><a href="https://drive.google.com/file/d/1L7dOZD-QIhWnLvsvydpaCOnDP4yFdRRs/view?usp=sharing" target="_blank">Relay Round Problems</a></li>
+              <li><a href="https://drive.google.com/file/d/13lM0SWlAb0P8jrsorWOA6K--pWHx4pan/view?usp=sharing" target="_blank">Answers to All Rounds</a></li>
+            </ul>
+
+            <h3>High School Division</h3>
+            <ul>
+              <li><a href="https://drive.google.com/file/d/1ks31h0OZ3NZtA6FVMeAIGPGxniCRhiDw/view?usp=sharing" target="_blank">Individual Round Problems</a></li>
+              <li><a href="https://drive.google.com/file/d/1qhXWatFqJh4We2UQiY9Y31viNybJ4hu7/view?usp=sharing" target="_blank">Team Round Problems</a></li>
+              <li><a href="https://drive.google.com/file/d/1VrQQ71zRoVUBCFtbVvVkCJf-hRkNHJ-c/view?usp=sharing" target="_blank">Relay Round Problems</a></li>
+              <li><a href="https://drive.google.com/file/d/1fPn8MeM5OpGIgd4AZ9lpojECndYLMRO7/view?usp=sharing" target="_blank">Answers to All Rounds</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- Default Message -->
+        <div class="default-content">
+          <p>Select a past contest from the sidebar to view details.</p>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div>© 2025 INTEGIRLS Phoenix</div>
+      <div>
+        Instagram : <a href="https://www.instagram.com/integirls.phoenix" target="_blank">@integirls.phoenix</a> |
+        Email : <a href="mailto:phoenix@integirls.org">phoenix@integirls.org</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Year Switching Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearLinks = document.querySelectorAll('.year-link');
+      const yearContents = document.querySelectorAll('.year-content');
+      const defaultContent = document.querySelector('.default-content');
+
+      function clearActive() {
+        yearLinks.forEach(l => l.classList.remove('active'));
+        yearContents.forEach(c => c.classList.remove('active'));
+      }
+
+      yearLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          clearActive();
+          if (defaultContent) defaultContent.style.display = 'none';
+
+          this.classList.add('active');
+          const targetYear = this.getAttribute('data-year');
+          const targetContent = document.getElementById(targetYear);
+
+          if (targetContent) {
+            targetContent.classList.add('active');
+            targetContent.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
